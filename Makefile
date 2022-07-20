@@ -2,7 +2,7 @@ LATEX=pdflatex
 BIBTEX=biber
 REMOVE=del # Windows
 
-MAIN=presentation
+MAIN=main
 
 all:
 	$(LATEX) $(MAIN)
