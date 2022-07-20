@@ -1,11 +1,15 @@
 \documentclass{beamer}
 \usepackage[backend=biber]{biblatex}
+\usepackage{optidef}
 
 \beamertemplatenavigationsymbolsempty
 \usetheme{Warsaw}
 \addbibresource{reference.bib}
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DESCRIPTION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand
 \highlight
 [1]
@@ -14,6 +18,37 @@
 \newcommand
 \exampleFootnote
 {\footnote{Example}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MATH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\const}{\mathfrak}
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROBLEM
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\embbUser}{u}
+\newcommand{\embbRa}{\alpha}
+\newcommand{\embbRaVec}{\vec{\embbRa}}
+\newcommand{\embbLa}{\gamma}
+\newcommand{\embbLaVec}{\vec{\embbLa}}
+\newcommand{\embbLaThree}[1]{\embbLa_{\embbUser, #1, \baseStation}}
+\newcommand{\multiconnectivityCapacity}{\const{a}_{\embbUser}}
+
+\newcommand{\urllcRa}{\beta}
+\newcommand{\urllcRaVec}{\vec{\urllcRa}}
+\newcommand{\urllcLa}{\delta}
+\newcommand{\urllcLaVec}{\vec{\delta}}
+
+\newcommand{\timeSlot}{n}
+
+\newcommand{\baseStation}{s}
+
+\newcommand{\rate}{r}
+\newcommand{\avgRate}[1]{\bar{\rate}_{#1}}
+
+\newcommand{\utilityCompositeFunction}[1]{\ln{#1}}
 
 \title{eMBB Multiconnectivity URLLC Multicell eMBB URLLC Puncturing}
 \author{Phong-Binh Tran}
@@ -28,6 +63,7 @@
 \end{frame}
 
 \input{description}
+\input{problem}
 
 \begin{frame}
   \frametitle{References}
