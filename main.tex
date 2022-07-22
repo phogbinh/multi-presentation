@@ -1,6 +1,6 @@
 \documentclass{beamer}
 \usepackage[backend=biber]{biblatex}
-\usepackage{optidef}
+\usepackage{multi}
 
 \beamertemplatenavigationsymbolsempty
 \usetheme{Warsaw}
@@ -8,7 +8,7 @@
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% DESCRIPTION
+% MACRO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand
 \highlight
@@ -20,48 +20,8 @@
 {\footnote{Example}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% MATH
+% DOCUMENT
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\const}{\mathfrak}
-\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
-\newcommand{\set}[1]{\left\{#1\right\}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PROBLEM
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\embbUser}{u}
-\newcommand{\embbRa}{\alpha}
-\newcommand{\embbRaVec}{\vec{\embbRa}}
-\newcommand{\embbRaFour}[1]{\embbRa_{\embbUser, #1, \baseStation, \subchannel}}
-\newcommand{\embbLa}{\gamma}
-\newcommand{\embbLaVec}{\vec{\embbLa}}
-\newcommand{\embbLaThree}[1]{\embbLa_{\embbUser, #1, \baseStation}}
-\newcommand{\multiconnectivityCapacity}{\const{a}_{\embbUser}}
-\newcommand{\embbAverageRate}{\bar{\rate}_{\embbUser}}
-
-\newcommand{\urllcUser}{v}
-\newcommand{\urllcRa}{\beta}
-\newcommand{\urllcRaVec}{\vec{\urllcRa}}
-\newcommand{\urllcRaSix}[2]{\urllcRa_{\urllcUser, \embbUser, #1, #2, \baseStation, \subchannel}}
-\newcommand{\urllcLa}{\delta}
-\newcommand{\urllcLaVec}{\vec{\delta}}
-\newcommand{\urllcLaFour}[2]{\urllcLa_{\urllcUser, #1, #2, \baseStation}}
-\newcommand{\urllcRateThree}{\rate_{\urllcUser, \timeSlot, \timeMinislot}}
-\newcommand{\demand}{R}
-\newcommand{\demandThree}{\demand_{\urllcUser, \timeSlot, \timeMinislot}}
-
-\newcommand{\timeSlot}{n}
-
-\newcommand{\timeMinislot}{m}
-
-\newcommand{\baseStation}{s}
-
-\newcommand{\subchannel}{l}
-
-\newcommand{\rate}{r}
-
-\newcommand{\utilityCompositeFunction}[1]{\ln{#1}}
-
 \title{eMBB Multiconnectivity URLLC Multicell eMBB URLLC Puncturing}
 \author{Phong-Binh Tran}
 \institute{Department of Computer Science, National Tsing Hua University, Hsinchu, Taiwan}
