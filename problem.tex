@@ -106,3 +106,35 @@
       {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
   \end{maxi!}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Relaxed Offline eMBB}
+  \begin{maxi!}
+    {\embbRaVecRelax, \embbLaVecRelax}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRelax}}}
+    {}{}
+    \addConstraint
+      {\sum_{\baseStation}{\embbLaThreeRelax{\timeSlot}}}
+      {\leq \multiconnectivityCapacity}
+      {\forall\embbUser, \forall\timeSlot}
+    \addConstraint
+      {\embbRaFourRelax{\timeSlot}}
+      {\leq \embbLaThreeRelax{\timeSlot}}
+      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+    \addConstraint
+      {\embbLaThreeRelax{\timeSlot}}
+      {\leq 1}
+      {\forall\embbUser, \forall\timeSlot, \forall\baseStation}
+    \addConstraint
+      {\embbLaThreeRelax{\timeSlot}}
+      {\geq 0}
+      {\forall\embbUser, \forall\timeSlot, \forall\baseStation}
+    \addConstraint
+      {\sum_{\embbUser}{\embbRaFourRelax{\timeSlot}}}
+      {\leq 1}
+      {\forall\timeSlot, \forall\baseStation, \forall\subchannel}
+    \addConstraint
+      {\embbRaFourRelax{\timeSlot}}
+      {\geq 0}
+      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+  \end{maxi!}
+\end{frame}
