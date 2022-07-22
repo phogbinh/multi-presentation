@@ -1,10 +1,52 @@
 \begin{frame}
+  \frametitle{Offline Problem}
+  \tiny
   \begin{maxi!}
-    {\embbRaVec, \embbLaVec, \urllcRaVec, \urllcLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\avgRate{\embbUser}}}}
+    {\embbRaVec, \embbLaVec, \urllcRaVec, \urllcLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRate}}}
     {}{}
     \addConstraint
       {\sum_{\baseStation}{\embbLaThree{\timeSlot}}}
-      {\leq \multiconnectivityCapacity,\quad}
+      {\leq \multiconnectivityCapacity}
       {\forall\embbUser, \forall\timeSlot}
+    \addConstraint
+      {\embbRaFour{\timeSlot}}
+      {\leq \embbLaThree{\timeSlot}}
+      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+    \addConstraint
+      {\embbLaThree{\timeSlot}}
+      {\in \set{0, 1}}
+      {\forall\embbUser, \forall\timeSlot, \forall\baseStation}
+    \addConstraint
+      {\sum_{\embbUser}{\embbRaFour{\timeSlot}}}
+      {\leq 1}
+      {\forall\timeSlot, \forall\baseStation, \forall\subchannel}
+    \addConstraint
+      {\embbRaFour{\timeSlot}}
+      {\in \set{0, 1}}
+      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+    \addConstraint
+      {\sum_{\baseStation}{\urllcLaFour{\timeSlot}{\timeMinislot}}}
+      {\leq 1}
+      {\forall\urllcUser, \forall\timeSlot, \forall\timeMinislot}
+    \addConstraint
+      {\urllcRaSix{\timeSlot}{\timeMinislot}}
+      {\leq \urllcLaFour{\timeSlot}{\timeMinislot}}
+      {\forall\urllcUser, \forall\embbUser, \forall\timeSlot, \forall\timeMinislot, \forall\baseStation, \forall\subchannel}
+    \addConstraint
+      {\urllcLaFour{\timeSlot}{\timeMinislot}}
+      {\in \set{0, 1}}
+      {\forall\urllcUser, \forall\timeSlot, \forall\timeMinislot, \forall\baseStation}
+    \addConstraint
+      {\sum_{\urllcUser}{\urllcRaSix{\timeSlot}{\timeMinislot}}}
+      {\leq \embbRaFour{\timeSlot}}
+      {\forall\embbUser, \forall\timeSlot, \forall\timeMinislot, \forall\baseStation, \forall\subchannel}
+    \addConstraint
+      {\urllcRateThree}
+      {\geq \demandThree}
+      {\forall\urllcUser, \forall\timeSlot, \forall\timeMinislot}
+    \addConstraint
+      {\urllcRaSix{\timeSlot}{\timeMinislot}}
+      {\in \set{0, 1}}
+      {\forall\urllcUser, \forall\embbUser, \forall\timeSlot, \forall\timeMinislot, \forall\baseStation, \forall\subchannel}
   \end{maxi!}
 \end{frame}
