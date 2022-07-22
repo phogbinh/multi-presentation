@@ -78,3 +78,31 @@
       \end{itemize}
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Offline eMBB}
+  \begin{maxi!}
+    {\embbRaVec, \embbLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRate}}}
+    {}{}
+    \addConstraint
+      {\sum_{\baseStation}{\embbLaThree{\timeSlot}}}
+      {\leq \multiconnectivityCapacity}
+      {\forall\embbUser, \forall\timeSlot}
+    \addConstraint
+      {\embbRaFour{\timeSlot}}
+      {\leq \embbLaThree{\timeSlot}}
+      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+    \addConstraint
+      {\embbLaThree{\timeSlot}}
+      {\in \set{0, 1}}
+      {\forall\embbUser, \forall\timeSlot, \forall\baseStation}
+    \addConstraint
+      {\sum_{\embbUser}{\embbRaFour{\timeSlot}}}
+      {\leq 1}
+      {\forall\timeSlot, \forall\baseStation, \forall\subchannel}
+    \addConstraint
+      {\embbRaFour{\timeSlot}}
+      {\in \set{0, 1}}
+      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+  \end{maxi!}
+\end{frame}
