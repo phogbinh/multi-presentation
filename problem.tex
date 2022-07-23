@@ -8,47 +8,47 @@
     \addConstraint
       {\sum_{\baseStation}{\embbLaThree}}
       {\leq \multiconnectivityCapacity\label{pb:offline1}}
-      {\forall\embbUser, \forall\timeSlot}
+      {\forall\embbUser \forall\timeSlot}
     \addConstraint
       {\embbRaFour}
       {\leq \embbLaThree\label{pb:offline2}}
-      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+      {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbLaThree}
       {\in \set{0, 1}\label{pb:offline3}}
-      {\forall\embbUser, \forall\timeSlot, \forall\baseStation}
+      {\forall\embbUser \forall\timeSlot \forall\baseStation}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFour}}
       {\leq 1\label{pb:offline4}}
-      {\forall\timeSlot, \forall\baseStation, \forall\subchannel}
+      {\forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbRaFour}
       {\in \set{0, 1}\label{pb:offline5}}
-      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+      {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\sum_{\baseStation}{\urllcLaFour}}
       {\leq 1\label{pb:offline6}}
-      {\forall\urllcUser, \forall\timeSlot, \forall\timeMinislot}
+      {\forall\urllcUser \forall\timeSlot \forall\timeMinislot}
     \addConstraint
       {\urllcRaSix}
       {\leq \urllcLaFour\label{pb:offline7}}
-      {\forall\urllcUser, \forall\embbUser, \forall\timeSlot, \forall\timeMinislot, \forall\baseStation, \forall\subchannel}
+      {\forall\urllcUser \forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\urllcLaFour}
       {\in \set{0, 1}\label{pb:offline8}}
-      {\forall\urllcUser, \forall\timeSlot, \forall\timeMinislot, \forall\baseStation}
+      {\forall\urllcUser \forall\timeSlot \forall\timeMinislot \forall\baseStation}
     \addConstraint
       {\sum_{\urllcUser}{\urllcRaSix}}
       {\leq \embbRaFour\label{pb:offline9}}
-      {\forall\embbUser, \forall\timeSlot, \forall\timeMinislot, \forall\baseStation, \forall\subchannel}
+      {\forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\urllcRateThree}
       {\geq \demandThree\label{pb:offline10}}
-      {\forall\urllcUser, \forall\timeSlot, \forall\timeMinislot}
+      {\forall\urllcUser \forall\timeSlot \forall\timeMinislot}
     \addConstraint
       {\urllcRaSix}
       {\in \set{0, 1}\label{pb:offline11}}
-      {\forall\urllcUser, \forall\embbUser, \forall\timeSlot, \forall\timeMinislot, \forall\baseStation, \forall\subchannel}
+      {\forall\urllcUser \forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
   \end{maxi!}
 \end{frame}
 
@@ -88,23 +88,23 @@
     \addConstraint
       {\sum_{\baseStation}{\embbLaThree}}
       {\leq \multiconnectivityCapacity}
-      {\forall\embbUser, \forall\timeSlot}
+      {\forall\embbUser \forall\timeSlot}
     \addConstraint
       {\embbRaFour}
       {\leq \embbLaThree}
-      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+      {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbLaThree}
       {\in \set{0, 1}}
-      {\forall\embbUser, \forall\timeSlot, \forall\baseStation}
+      {\forall\embbUser \forall\timeSlot \forall\baseStation}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFour}}
       {\leq 1}
-      {\forall\timeSlot, \forall\baseStation, \forall\subchannel}
+      {\forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbRaFour}
       {\in \set{0, 1}}
-      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+      {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
   \end{maxi!}
 \end{frame}
 
@@ -116,26 +116,26 @@
     \addConstraint
       {\sum_{\baseStation}{\embbLaThreeRelax}}
       {\leq \multiconnectivityCapacity}
-      {\forall\embbUser, \forall\timeSlot}
+      {\forall\embbUser \forall\timeSlot}
     \addConstraint
       {\embbRaFourRelax}
       {\leq \embbLaThreeRelax}
-      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+      {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbLaThreeRelax}
       {\leq 1}
-      {\forall\embbUser, \forall\timeSlot, \forall\baseStation}
+      {\forall\embbUser \forall\timeSlot \forall\baseStation}
     \addConstraint
       {\embbLaThreeRelax}
       {\geq 0}
-      {\forall\embbUser, \forall\timeSlot, \forall\baseStation}
+      {\forall\embbUser \forall\timeSlot \forall\baseStation}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFourRelax}}
       {\leq 1}
-      {\forall\timeSlot, \forall\baseStation, \forall\subchannel}
+      {\forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbRaFourRelax}
       {\geq 0}
-      {\forall\embbUser, \forall\timeSlot, \forall\baseStation, \forall\subchannel}
+      {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
   \end{maxi!}
 \end{frame}
