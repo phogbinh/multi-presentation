@@ -146,3 +146,35 @@
       {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
   \end{maxi!}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Relaxed Online eMBB}
+  \begin{maxi!}
+    {\embbRaVecOneRelaxCur, \embbLaVecOneRelaxCur}{\sum_{\embbUser}{\frac{\embbRateTwoRelaxCur}{\embbMovingAverageRateTwoRelaxCur}}}
+    {}{}
+    \addConstraint
+      {\sum_{\baseStation}{\embbLaThreeRelaxCur}}
+      {\leq \multiconnectivityCapacity}
+      {\forall\embbUser}
+    \addConstraint
+      {\embbRaFourRelaxCur}
+      {\leq \embbLaThreeRelaxCur}
+      {\forall\embbUser \forall\baseStation \forall\subchannel}
+    \addConstraint
+      {\embbLaThreeRelaxCur}
+      {\leq 1}
+      {\forall\embbUser \forall\baseStation}
+    \addConstraint
+      {\embbLaThreeRelaxCur}
+      {\geq 0}
+      {\forall\embbUser \forall\baseStation}
+    \addConstraint
+      {\sum_{\embbUser}{\embbRaFourRelaxCur}}
+      {\leq 1}
+      {\forall\baseStation \forall\subchannel}
+    \addConstraint
+      {\embbRaFourRelaxCur}
+      {\geq 0}
+      {\forall\embbUser \forall\baseStation \forall\subchannel}
+  \end{maxi!}
+\end{frame}
