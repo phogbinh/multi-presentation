@@ -196,12 +196,12 @@
   \begin{itemize}
     \item The initial value of which is defined by a feasible policy for the relaxed offline eMBB problem\proofFootnote
       \begin{align}
-        \embbRaFourRelax &=
+        \embbRaFourRelaxCandidate &=
           \begin{cases}
             \frac{1}{\embbUsersNum} &\timeSlot = 0\\
             0 &\nonzeroTimeSlots
           \end{cases} &\forall\embbUser \forall\baseStation \forall\subchannel\\
-        \embbLaThreeRelax &=
+        \embbLaThreeRelaxCandidate &=
           \begin{cases}
             \frac{\multiconnectivityCapacity}{\baseStationsNum} &\timeSlot = 0\\
             0 &\nonzeroTimeSlots
