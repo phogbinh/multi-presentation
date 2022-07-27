@@ -191,3 +191,21 @@
       \end{equation}
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item The initial value of which is defined by a feasible\footnote{Proof in supplementary} policy for the relaxed offline eMBB problem
+      \begin{align}
+        \embbRaFourRelax &=
+          \begin{cases}
+            \frac{1}{\embbUsersNum} &\timeSlot = 0\\
+            0 &\nonzeroTimeSlots
+          \end{cases} &\forall\embbUser \forall\baseStation \forall\subchannel\\
+        \embbLaThreeRelax &=
+          \begin{cases}
+            \frac{\multiconnectivityCapacity}{\baseStationsNum} &\timeSlot = 0\\
+            0 &\nonzeroTimeSlots
+          \end{cases} &\forall\embbUser \forall\baseStation
+      \end{align}
+  \end{itemize}
+\end{frame}
