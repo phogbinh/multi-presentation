@@ -194,18 +194,18 @@
 
 \begin{frame}
   \begin{itemize}
-    \item The initial value of which is defined by a feasible policy for the relaxed offline eMBB problem\proofFootnote
+    \item The initial value of which is defined by the feasible policy $\tuple{\embbRaVecRelaxCandidate, \embbLaVecRelaxCandidate}$ for the relaxed offline eMBB problem where\proofFootnote
       \begin{align}
         \embbRaFourRelaxCandidate &=
           \begin{cases}
             \frac{1}{\embbUsersNum} &\timeSlot = 0\\
             0 &\nonzeroTimeSlots
-          \end{cases} &\forall\embbUser \forall\baseStation \forall\subchannel\\
+          \end{cases} &\forall\embbUser \forall\baseStation \forall\subchannel,\\
         \embbLaThreeRelaxCandidate &=
           \begin{cases}
             \frac{\multiconnectivityCapacity}{\baseStationsNum} &\timeSlot = 0\\
             0 &\nonzeroTimeSlots
-          \end{cases} &\forall\embbUser \forall\baseStation
+          \end{cases} &\forall\embbUser \forall\baseStation.
       \end{align}
   \end{itemize}
 \end{frame}
