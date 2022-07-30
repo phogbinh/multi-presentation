@@ -1,14 +1,19 @@
 LATEX=pdflatex
 BIBTEX=biber
+COPY=copy # Windows
 REMOVE=del # Windows
 
 MAIN=main
+REFERENCE=reference.bib
 
-all:
+all: $(REFERENCE)
 	$(LATEX) $(MAIN)
 	$(BIBTEX) $(MAIN)
 	$(LATEX) $(MAIN)
 	$(LATEX) $(MAIN)
+
+$(REFERENCE):
+	$(COPY) $(MULTI_REFERENCE_DIR)\$(REFERENCE)
 
 clean:
 	$(REMOVE) *.aux
