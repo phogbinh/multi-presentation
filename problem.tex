@@ -1,67 +1,67 @@
 \section{Problem}
 \begin{frame}
-  \frametitle{Offline}
+  \frametitle{Problem}
   \tiny
   \begin{maxi!}
-    {\embbRaVec, \embbLaVec, \urllcRaVec, \urllcLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateOne}}\label{pb:offline0}}
+    {\embbRaVec, \embbLaVec, \urllcRaVec, \urllcLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOne}}\label{pb:problem0}}
     {}{}
     \addConstraint
       {\sum_{\baseStation}{\embbLaThree}}
-      {\leq \multiconnectivityCapacity\label{pb:offline1}}
+      {\leq \multiconnectivityCapacity\label{pb:problem1}}
       {\forall\embbUser \forall\timeSlot}
     \addConstraint
       {\embbRaFour}
-      {\leq \embbLaThree\label{pb:offline2}}
+      {\leq \embbLaThree\label{pb:problem2}}
       {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbLaThree}
-      {\in \set{0, 1}\label{pb:offline3}}
+      {\in \set{0, 1}\label{pb:problem3}}
       {\forall\embbUser \forall\timeSlot \forall\baseStation}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFour}}
-      {\leq 1\label{pb:offline4}}
+      {\leq 1\label{pb:problem4}}
       {\forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbRaFour}
-      {\in \set{0, 1}\label{pb:offline5}}
+      {\in \set{0, 1}\label{pb:problem5}}
       {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\sum_{\baseStation}{\urllcLaFour}}
-      {\leq 1\label{pb:offline6}}
+      {\leq 1\label{pb:problem6}}
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot}
     \addConstraint
       {\urllcRaSix}
-      {\leq \urllcLaFour\label{pb:offline7}}
+      {\leq \urllcLaFour\label{pb:problem7}}
       {\forall\urllcUser \forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\urllcLaFour}
-      {\in \set{0, 1}\label{pb:offline8}}
+      {\in \set{0, 1}\label{pb:problem8}}
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot \forall\baseStation}
     \addConstraint
       {\sum_{\urllcUser}{\urllcRaSix}}
-      {\leq \embbRaFour\label{pb:offline9}}
+      {\leq \embbRaFour\label{pb:problem9}}
       {\forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
     \addConstraint
-      {\urllcRateThree}
-      {\geq \demandThree\label{pb:offline10}}
+      {\urllcRateRandThree}
+      {\geq \demandRandThree\label{pb:problem10}}
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot}
     \addConstraint
       {\urllcRaSix}
-      {\in \set{0, 1}\label{pb:offline11}}
+      {\in \set{0, 1}\label{pb:problem11}}
       {\forall\urllcUser \forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
   \end{maxi!}
 \end{frame}
 
 \begin{frame}
   \begin{itemize}
-    \item The system maximizes eMBB traffic's total average rate and fairness \eqref{pb:offline0}.
+    \item The system maximizes eMBB traffic's total average rate and fairness \eqref{pb:problem0}.
     \item For each time slot, the system
       \begin{itemize}
-        \item complies with the multiconnectivity capabilities of eMBB users \eqref{pb:offline1}.
-        \item schedules a subchannel to an eMBB user only if it associates the corresponding base station to the user \eqref{pb:offline2}.
-        \item either un-associates or associates a base station to an eMBB user \eqref{pb:offline3}.
-        \item schedules a subchannel to at most one eMBB user \eqref{pb:offline4}.
-        \item either un-schedules or schedules a subchannel to an eMBB user \eqref{pb:offline5}.
+        \item complies with the multiconnectivity capabilities of eMBB users \eqref{pb:problem1}.
+        \item schedules a subchannel to an eMBB user only if it associates the corresponding base station to the user \eqref{pb:problem2}.
+        \item either un-associates or associates a base station to an eMBB user \eqref{pb:problem3}.
+        \item schedules a subchannel to at most one eMBB user \eqref{pb:problem4}.
+        \item either un-schedules or schedules a subchannel to an eMBB user \eqref{pb:problem5}.
       \end{itemize}
   \end{itemize}
 \end{frame}
@@ -70,12 +70,12 @@
   \begin{itemize}
     \item For each time minislot, the system
       \begin{itemize}
-        \item associates at most one base station to a URLLC user \eqref{pb:offline6}.
-        \item schedules a subchannel to a URLLC user only if it associates the corresponding base station to the user \eqref{pb:offline7}.
-        \item either un-associates or associates a base station to a URLLC user \eqref{pb:offline8}.
-        \item schedules a subchannel to at most one URLLC user, and punctures the subchannel for a URLLC user only if it schedules the subchannel to the corresponding eMBB user \eqref{pb:offline9}\proofFootnote.
-        \item serves demands of URLLC users without delays \eqref{pb:offline10}.
-        \item employs URLLC puncturing scheme instead of superposition \eqref{pb:offline11}.
+        \item associates at most one base station to a URLLC user \eqref{pb:problem6}.
+        \item schedules a subchannel to a URLLC user only if it associates the corresponding base station to the user \eqref{pb:problem7}.
+        \item either un-associates or associates a base station to a URLLC user \eqref{pb:problem8}.
+        \item schedules a subchannel to at most one URLLC user, and punctures the subchannel for a URLLC user only if it schedules the subchannel to the corresponding eMBB user \eqref{pb:problem9}\proofFootnote.
+        \item serves demands of URLLC users without delays \eqref{pb:problem10}.
+        \item employs URLLC puncturing scheme instead of superposition \eqref{pb:problem11}.
       \end{itemize}
   \end{itemize}
 \end{frame}
@@ -88,9 +88,9 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Offline eMBB}
+  \frametitle{eMBB Problem}
   \begin{maxi!}
-    {\embbRaVec, \embbLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateOne}}}
+    {\embbRaVec, \embbLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOne}}}
     {}{}
     \addConstraint
       {\sum_{\baseStation}{\embbLaThree}}
@@ -116,9 +116,9 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Relaxed Offline eMBB}
+  \frametitle{Relaxed eMBB Problem}
   \begin{maxi!}
-    {\embbRaVecRelax, \embbLaVecRelax}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateOneRelax}}}
+    {\embbRaVecRelax, \embbLaVecRelax}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOneRelax}}}
     {}{}
     \addConstraint
       {\sum_{\baseStation}{\embbLaThreeRelax}}
@@ -148,7 +148,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Relaxed Online eMBB}
+  \frametitle{Gradient Problem}
   \begin{maxi!}
     {\embbRaVecOneRelaxCur, \embbLaVecOneRelaxCur}{\sum_{\embbUser}{\frac{\embbRateTwoRelaxCur}{\embbMovingAverageRateTwoRelaxCur}}}
     {}{}
@@ -194,7 +194,7 @@
 
 \begin{frame}
   \begin{itemize}
-    \item The initial value of which is defined by the feasible policy $\tuple{\embbRaVecRelaxCandidate, \embbLaVecRelaxCandidate}$ for the relaxed offline eMBB problem where\proofFootnote
+    \item The initial value of which is defined by the feasible policy $\tuple{\embbRaVecRelaxCandidate, \embbLaVecRelaxCandidate}$ for the relaxed eMBB problem where\proofFootnote
       \begin{align}
         \embbRaFourRelaxCandidate &=
           \begin{cases}
@@ -217,7 +217,7 @@
         \policy = \left\{\tuple{\embbRaVecCandidate, \embbLaVecCandidate} \subjectTo
           \begin{aligned}
             \forall\timeSlot \colon \tuple{\embbRaVecOneCandidate, \embbLaVecOneCandidate} \text{ is a basic optimal point}\\
-            \text{of $\timeSlot^{th}$ relaxed online eMBB problem}
+            \text{of $\timeSlot^{th}$ gradient problem}
           \end{aligned} \right\}.
       \end{equation}
   \end{itemize}
@@ -225,6 +225,6 @@
 
 \begin{frame}
   \begin{itemize}
-    \item $\tuple{\embbRaVecCandidate, \embbLaVecCandidate}$ is an asymptotically optimal policy for the offline eMBB problem\proofFootnote.
+    \item $\tuple{\embbRaVecCandidate, \embbLaVecCandidate}$ is an asymptotically optimal policy for the eMBB problem\proofFootnote.
   \end{itemize}
 \end{frame}
