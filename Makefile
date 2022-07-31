@@ -16,6 +16,7 @@ $(REFERENCE):
 	$(COPY) $(MULTI_REFERENCE_DIR)\$(REFERENCE)
 
 clean:
+	$(REMOVE) $(REFERENCE)
 	$(REMOVE) *.aux
 	$(REMOVE) *.bbl
 	$(REMOVE) *.bcf
