@@ -15,7 +15,7 @@
       {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbLaThree}
-      {\in \set{0, 1}\label{pb:problem3}}
+      {\in \setDst{0, 1}\label{pb:problem3}}
       {\forall\embbUser \forall\timeSlot \forall\baseStation}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFour}}
@@ -23,7 +23,7 @@
       {\forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbRaFour}
-      {\in \set{0, 1}\label{pb:problem5}}
+      {\in \setDst{0, 1}\label{pb:problem5}}
       {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\sum_{\baseStation}{\urllcLaFour}}
@@ -35,7 +35,7 @@
       {\forall\urllcUser \forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\urllcLaFour}
-      {\in \set{0, 1}\label{pb:problem8}}
+      {\in \setDst{0, 1}\label{pb:problem8}}
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot \forall\baseStation}
     \addConstraint
       {\sum_{\urllcUser}{\urllcRaSix}}
@@ -47,7 +47,7 @@
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot}
     \addConstraint
       {\urllcRaSix}
-      {\in \set{0, 1}\label{pb:problem11}}
+      {\in \setDst{0, 1}\label{pb:problem11}}
       {\forall\urllcUser \forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
   \end{maxi!}
 \end{frame}
@@ -102,7 +102,7 @@
       {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbLaThree}
-      {\in \set{0, 1}}
+      {\in \setDst{0, 1}}
       {\forall\embbUser \forall\timeSlot \forall\baseStation}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFour}}
@@ -110,7 +110,7 @@
       {\forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbRaFour}
-      {\in \set{0, 1}}
+      {\in \setDst{0, 1}}
       {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
   \end{maxi!}
 \end{frame}
