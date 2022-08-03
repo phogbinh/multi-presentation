@@ -7,35 +7,35 @@
     {}{}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFour}}
-      {\leq 1\label{pb:problem4}}
+      {\leq 1\label{pb:problem1}}
       {\forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbRaFour}
-      {\in \setDst{0, 1}\label{pb:problem5}}
+      {\in \setDst{0, 1}\label{pb:problem2}}
       {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\sum_{\baseStation}{\urllcLaFour}}
-      {\leq 1\label{pb:problem6}}
+      {\leq 1\label{pb:problem3}}
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot}
     \addConstraint
       {\urllcRaSix}
-      {\leq \urllcLaFour\label{pb:problem7}}
+      {\leq \urllcLaFour\label{pb:problem4}}
       {\forall\urllcUser \forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\urllcLaFour}
-      {\in \setDst{0, 1}\label{pb:problem8}}
+      {\in \setDst{0, 1}\label{pb:problem5}}
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot \forall\baseStation}
     \addConstraint
       {\sum_{\urllcUser}{\urllcRaSix}}
-      {\leq \embbRaFour\label{pb:problem9}}
+      {\leq \embbRaFour\label{pb:problem6}}
       {\forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\urllcRateRandThree}
-      {\geq \demandRandThree\label{pb:problem10}}
+      {\geq \demandRandThree\label{pb:problem7}}
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot}
     \addConstraint
       {\urllcRaSix}
-      {\in \setDst{0, 1}\label{pb:problem11}}
+      {\in \setDst{0, 1}\label{pb:problem8}}
       {\forall\urllcUser \forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
   \end{maxi!}
 \end{frame}
@@ -45,8 +45,8 @@
     \item The system maximizes eMBB traffic's total average rate and fairness \eqref{pb:problem0}.
     \item For each time slot, the system
       \begin{itemize}
-        \item schedules a subchannel to at most one eMBB user \eqref{pb:problem4}.
-        \item either un-schedules or schedules a subchannel to an eMBB user \eqref{pb:problem5}.
+        \item schedules a subchannel to at most one eMBB user \eqref{pb:problem1}.
+        \item either un-schedules or schedules a subchannel to an eMBB user \eqref{pb:problem2}.
       \end{itemize}
   \end{itemize}
 \end{frame}
@@ -55,12 +55,12 @@
   \begin{itemize}
     \item For each time minislot, the system
       \begin{itemize}
-        \item associates at most one base station to a URLLC user \eqref{pb:problem6}.
-        \item schedules a subchannel to a URLLC user only if it associates the corresponding base station to the user \eqref{pb:problem7}.
-        \item either un-associates or associates a base station to a URLLC user \eqref{pb:problem8}.
-        \item schedules a subchannel to at most one URLLC user, and punctures the subchannel for a URLLC user only if it schedules the subchannel to the corresponding eMBB user \eqref{pb:problem9}\proofFootnote.
-        \item serves demands of URLLC users without delays \eqref{pb:problem10}.
-        \item employs URLLC puncturing scheme instead of superposition \eqref{pb:problem11}.
+        \item associates at most one base station to a URLLC user \eqref{pb:problem3}.
+        \item schedules a subchannel to a URLLC user only if it associates the corresponding base station to the user \eqref{pb:problem4}.
+        \item either un-associates or associates a base station to a URLLC user \eqref{pb:problem5}.
+        \item schedules a subchannel to at most one URLLC user, and punctures the subchannel for a URLLC user only if it schedules the subchannel to the corresponding eMBB user \eqref{pb:problem6}\proofFootnote.
+        \item serves demands of URLLC users without delays \eqref{pb:problem7}.
+        \item employs URLLC puncturing scheme instead of superposition \eqref{pb:problem8}.
       \end{itemize}
   \end{itemize}
 \end{frame}
