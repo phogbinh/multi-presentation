@@ -107,24 +107,8 @@
 \begin{frame}
   \frametitle{Gradient Problem}
   \begin{maxi!}
-    {\embbRaVecOneRelaxCur, \embbLaVecOneRelaxCur}{\sum_{\embbUser}{\frac{\embbRateTwoRelaxCur}{\embbMovingAverageRateTwoRelaxCur}}}
+    {\embbRaVecOneRelaxCur}{\sum_{\embbUser}{\frac{\embbRateTwoRelaxCur}{\embbMovingAverageRateTwoRelaxCur}}}
     {}{}
-    \addConstraint
-      {\sum_{\baseStation}{\embbLaThreeRelaxCur}}
-      {\leq \multiconnectivityCapacity}
-      {\forall\embbUser}
-    \addConstraint
-      {\embbRaFourRelaxCur}
-      {\leq \embbLaThreeRelaxCur}
-      {\forall\embbUser \forall\baseStation \forall\subchannel}
-    \addConstraint
-      {\embbLaThreeRelaxCur}
-      {\leq 1}
-      {\forall\embbUser \forall\baseStation}
-    \addConstraint
-      {\embbLaThreeRelaxCur}
-      {\geq 0}
-      {\forall\embbUser \forall\baseStation}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFourRelaxCur}}
       {\leq 1}
