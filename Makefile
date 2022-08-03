@@ -1,7 +1,8 @@
+# Windows
 LATEX=pdflatex
 BIBTEX=biber
-COPY=copy # Windows
-REMOVE=del # Windows
+COPY=copy
+REMOVE=del
 
 MAIN=main
 REFERENCE=reference.bib
