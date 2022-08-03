@@ -3,20 +3,8 @@
   \frametitle{Problem}
   \tiny
   \begin{maxi!}
-    {\embbRaVec, \embbLaVec, \urllcRaVec, \urllcLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOne}}\label{pb:problem0}}
+    {\embbRaVec, \urllcRaVec, \urllcLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOne}}\label{pb:problem0}}
     {}{}
-    \addConstraint
-      {\sum_{\baseStation}{\embbLaThree}}
-      {\leq \multiconnectivityCapacity\label{pb:problem1}}
-      {\forall\embbUser \forall\timeSlot}
-    \addConstraint
-      {\embbRaFour}
-      {\leq \embbLaThree\label{pb:problem2}}
-      {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
-    \addConstraint
-      {\embbLaThree}
-      {\in \setDst{0, 1}\label{pb:problem3}}
-      {\forall\embbUser \forall\timeSlot \forall\baseStation}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFour}}
       {\leq 1\label{pb:problem4}}
