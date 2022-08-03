@@ -1,22 +1,27 @@
 # Windows
 LATEX=pdflatex
 BIBTEX=biber
+INKSCAPE=inkscape
 COPY=copy
 REMOVE=del
 
 MAIN=main
 REFERENCE=reference.bib
 
-all: $(REFERENCE)
+all: *.eps $(REFERENCE)
 	$(LATEX) $(MAIN)
 	$(BIBTEX) $(MAIN)
 	$(LATEX) $(MAIN)
 	$(LATEX) $(MAIN)
 
+*.eps:
+	for %%f in ($(MULTI_FIGURE_DIR)\*.svg) do $(INKSCAPE) %%f -o .\%%~nf.eps
+
 $(REFERENCE):
 	$(COPY) $(MULTI_REFERENCE_DIR)\$(REFERENCE)
 
 clean:
+	$(REMOVE) *.eps
 	$(REMOVE) $(REFERENCE)
 	$(REMOVE) *.aux
 	$(REMOVE) *.bbl
