@@ -91,24 +91,8 @@
 \begin{frame}
   \frametitle{Relaxed eMBB Problem}
   \begin{maxi!}
-    {\embbRaVecRelax, \embbLaVecRelax}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOneRelax}}}
+    {\embbRaVecRelax}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOneRelax}}}
     {}{}
-    \addConstraint
-      {\sum_{\baseStation}{\embbLaThreeRelax}}
-      {\leq \multiconnectivityCapacity}
-      {\forall\embbUser \forall\timeSlot}
-    \addConstraint
-      {\embbRaFourRelax}
-      {\leq \embbLaThreeRelax}
-      {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
-    \addConstraint
-      {\embbLaThreeRelax}
-      {\leq 1}
-      {\forall\embbUser \forall\timeSlot \forall\baseStation}
-    \addConstraint
-      {\embbLaThreeRelax}
-      {\geq 0}
-      {\forall\embbUser \forall\timeSlot \forall\baseStation}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFourRelax}}
       {\leq 1}
