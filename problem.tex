@@ -135,19 +135,14 @@
 
 \begin{frame}
   \begin{itemize}
-    \item The initial value of which is defined by the feasible policy $\tuple{\embbRaVecRelaxCandidate, \embbLaVecRelaxCandidate}$ for the relaxed eMBB problem where\proofFootnote
-      \begin{align}
-        \embbRaFourRelaxCandidate &=
+    \item The initial value of which is defined by the feasible policy $\embbRaVecRelaxCandidate$ for the relaxed eMBB problem where\proofFootnote
+      \begin{equation}
+        \embbRaFourRelaxCandidate =
           \begin{cases}
             \frac{1}{\embbUsersNum} &\timeSlot = 0\\
             0 &\nonzeroTimeSlots
-          \end{cases} &\forall\embbUser \forall\baseStation \forall\subchannel,\\
-        \embbLaThreeRelaxCandidate &=
-          \begin{cases}
-            \frac{\multiconnectivityCapacity}{\baseStationsNum} &\timeSlot = 0\\
-            0 &\nonzeroTimeSlots
-          \end{cases} &\forall\embbUser \forall\baseStation.
-      \end{align}
+          \end{cases} \forall\embbUser \forall\baseStation \forall\subchannel.
+      \end{equation}
   \end{itemize}
 \end{frame}
 
