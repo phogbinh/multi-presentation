@@ -75,20 +75,8 @@
 \begin{frame}
   \frametitle{eMBB Problem}
   \begin{maxi!}
-    {\embbRaVec, \embbLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOne}}}
+    {\embbRaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOne}}}
     {}{}
-    \addConstraint
-      {\sum_{\baseStation}{\embbLaThree}}
-      {\leq \multiconnectivityCapacity}
-      {\forall\embbUser \forall\timeSlot}
-    \addConstraint
-      {\embbRaFour}
-      {\leq \embbLaThree}
-      {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
-    \addConstraint
-      {\embbLaThree}
-      {\in \setDst{0, 1}}
-      {\forall\embbUser \forall\timeSlot \forall\baseStation}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFour}}
       {\leq 1}
