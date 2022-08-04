@@ -151,3 +151,16 @@
     \item Given a policy $\embbRaVecCandidate$ where for $\timeSlot = 0, \dots, \timeSlotsNum - 1$, $\embbRaVecOneCandidate$ is a basic optimal point for the $\timeSlot^{th}$ gradient problem, then $\embbRaVecCandidate$ is an asymptotically optimal policy for the eMBB problem\proofFootnote.
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item The following policy is asymptotically optimal with respect to the eMBB problem\proofFootnote:
+      \begin{equation}
+        \embbRaFourCandidate =
+          \begin{cases}
+            1 &\embbUser = \min_{\embbUserCandidate}{\argmax_{\embbUserCandidate}{\frac{\embbPeakRateFourUserCandidate}{\embbMovingAverageRateTwoRelaxUserCandidate}}}\\
+            0 &\text{otherwise}
+          \end{cases} \forall\timeSlot \forall\baseStation \forall\subchannel \forall\embbUser.
+      \end{equation}
+  \end{itemize}
+\end{frame}
