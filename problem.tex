@@ -148,19 +148,6 @@
 
 \begin{frame}
   \begin{itemize}
-    \item Our set of policy(ies) is defined as
-      \begin{equation}
-        \policySet = \left\{\tuple{\embbRaVecCandidate, \embbLaVecCandidate} \subjectTo
-          \begin{aligned}
-            \forall\timeSlot \colon \tuple{\embbRaVecOneCandidate, \embbLaVecOneCandidate} \text{ is a basic optimal point}\\
-            \text{of $\timeSlot^{th}$ gradient problem}
-          \end{aligned} \right\}.
-      \end{equation}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \begin{itemize}
     \item Given a policy $\embbRaVecCandidate$ where for $\timeSlot = 0, \dots, \timeSlotsNum - 1$, $\embbRaVecOneCandidate$ is a basic optimal point for the $\timeSlot^{th}$ gradient problem, then $\embbRaVecCandidate$ is an asymptotically optimal policy for the eMBB problem\proofFootnote.
   \end{itemize}
 \end{frame}
