@@ -164,3 +164,35 @@
       \end{equation}
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Puncturing Problem}
+  \begin{mini!}
+    {\urllcRaVecTwoCur, \urllcLaVecTwoCur}{\sum_{\urllcUser, \embbUser, \baseStation, \subchannel}{\frac{\embbPeakRateFourCur}{\embbMovingAverageRateTwoRelaxCur} \urllcRaSixCur}}
+    {}{}
+    \addConstraint
+      {\sum_{\baseStation}{\urllcLaFourCur}}
+      {\leq 1}
+      {\forall\urllcUser}
+    \addConstraint
+      {\urllcRaSixCur}
+      {\leq \urllcLaFourCur}
+      {\forall\urllcUser \forall\embbUser \forall\baseStation \forall\subchannel}
+    \addConstraint
+      {\urllcLaFourCur}
+      {\in \setDst{0, 1}}
+      {\forall\urllcUser \forall\baseStation}
+    \addConstraint
+      {\sum_{\urllcUser}{\urllcRaSixCur}}
+      {\leq \embbRaFourCandidateCur}
+      {\forall\embbUser \forall\baseStation \forall\subchannel}
+    \addConstraint
+      {\urllcRateThreeCur}
+      {\geq \demandThreeCur}
+      {\forall\urllcUser}
+    \addConstraint
+      {\urllcRaSixCur}
+      {\in \setDst{0, 1}}
+      {\forall\urllcUser \forall\embbUser \forall\baseStation \forall\subchannel}
+  \end{mini!}
+\end{frame}
