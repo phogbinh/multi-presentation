@@ -162,6 +162,39 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{URLLC Problem}
+  \small
+  \begin{maxi!}
+    {\urllcRaVecOneSlotCur, \urllcLaVecOneSlotCur}{\sum_{\embbUser}{\frac{1}{\embbMovingAverageRateTwoRelaxCur} \sum_{\baseStation, \subchannel}{\frac{\sum_{\timeMinislot}{\left(\embbRaFourCandidateCur - \sum_{\urllcUser}{\urllcRaSixSlotCur}\right)}}{\timeMinislotsNum} \embbPeakRateFourCur}}}
+    {}{}
+    \addConstraint
+      {\sum_{\baseStation}{\urllcLaFourSlotCur}}
+      {\leq 1}
+      {\forall\urllcUser \forall\timeMinislot}
+    \addConstraint
+      {\urllcRaSixSlotCur}
+      {\leq \urllcLaFourSlotCur}
+      {\forall\urllcUser \forall\embbUser \forall\timeMinislot \forall\baseStation \forall\subchannel}
+    \addConstraint
+      {\urllcLaFourSlotCur}
+      {\in \setDst{0, 1}}
+      {\forall\urllcUser \forall\timeMinislot \forall\baseStation}
+    \addConstraint
+      {\sum_{\urllcUser}{\urllcRaSixSlotCur}}
+      {\leq \embbRaFourCandidateCur}
+      {\forall\embbUser \forall\timeMinislot \forall\baseStation \forall\subchannel}
+    \addConstraint
+      {\urllcRateRandThreeSlotCur}
+      {\geq \demandRandThreeSlotCur}
+      {\forall\urllcUser \forall\timeMinislot}
+    \addConstraint
+      {\urllcRaSixSlotCur}
+      {\in \setDst{0, 1}}
+      {\forall\urllcUser \forall\embbUser \forall\timeMinislot \forall\baseStation \forall\subchannel}
+  \end{maxi!}
+\end{frame}
+
+\begin{frame}
   \frametitle{Puncturing Problem}
   \begin{mini!}
     {\urllcRaVecTwoCur, \urllcLaVecTwoCur}{\sum_{\urllcUser, \embbUser, \baseStation, \subchannel}{\frac{\embbPeakRateFourCur}{\embbMovingAverageRateTwoRelaxCur} \urllcRaSixCur}}
