@@ -231,3 +231,35 @@
     \item Given a time slot policy $\tuple{\urllcRaVecOneSlotCur, \urllcLaVecOneSlotCur}$ where for $\timeMinislot = 0, \dots, \timeMinislotsNum - 1$, $\tuple{\urllcRaVecTwoSlotCur, \urllcLaVecTwoSlotCur}$ solves the $\timeMinislot^{th}$ puncturing problem, then $\tuple{\urllcRaVecOneSlotCur, \urllcLaVecOneSlotCur}$ is an optimal point for the URLLC problem\proofFootnote.
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Scheduling Problem}
+  \begin{mini!}
+    {\urllcNpRaVecTwoCur, \urllcLaVecTwoCur}{\sum_{\urllcUser, \baseStation, \subchannel}{\costThreeCur \urllcNpRaFiveCur}}
+    {}{}
+    \addConstraint
+      {\sum_{\baseStation}{\urllcLaFourCur}}
+      {\leq 1}
+      {\forall\urllcUser}
+    \addConstraint
+      {\urllcNpRaFiveCur}
+      {\leq \urllcLaFourCur}
+      {\forall\urllcUser \forall\baseStation \forall\subchannel}
+    \addConstraint
+      {\urllcLaFourCur}
+      {\in \setDst{0, 1}}
+      {\forall\urllcUser \forall\baseStation}
+    \addConstraint
+      {\sum_{\urllcUser}{\urllcNpRaFiveCur}}
+      {\leq 1}
+      {\forall\baseStation \forall\subchannel}
+    \addConstraint
+      {\urllcRateThreeCur}
+      {\geq \demandThreeCur}
+      {\forall\urllcUser}
+    \addConstraint
+      {\urllcNpRaFiveCur}
+      {\in \setDst{0, 1}}
+      {\forall\urllcUser \forall\baseStation \forall\subchannel}
+  \end{mini!}
+\end{frame}
