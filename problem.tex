@@ -278,3 +278,35 @@
     \item The scheduling problem is equivalent to the puncturing problem\proofFootnote.
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Homogeneous Problem}
+  \begin{mini!}
+    {\urllcNpRaVecTwoCur, \urllcLaVecTwoCur}{\minCostOneCur \sum_{\urllcUser, \baseStation, \subchannel}{\urllcNpRaFiveCur}}
+    {}{}
+    \addConstraint
+      {\sum_{\baseStation}{\urllcLaFourCur}}
+      {\leq 1}
+      {\forall\urllcUser}
+    \addConstraint
+      {\urllcNpRaFiveCur}
+      {\leq \urllcLaFourCur}
+      {\forall\urllcUser \forall\baseStation \forall\subchannel}
+    \addConstraint
+      {\urllcLaFourCur}
+      {\in \setDst{0, 1}}
+      {\forall\urllcUser \forall\baseStation}
+    \addConstraint
+      {\sum_{\urllcUser}{\urllcNpRaFiveCur}}
+      {\leq 1}
+      {\forall\baseStation \forall\subchannel}
+    \addConstraint
+      {\sum_{\baseStation, \subchannel}{\urllcNpRaFiveCur}}
+      {\geq \frac{\demandThreeCur}{\urllcMaxRateThreeCur}}
+      {\forall\urllcUser}
+    \addConstraint
+      {\urllcNpRaFiveCur}
+      {\in \setDst{0, 1}}
+      {\forall\urllcUser \forall\baseStation \forall\subchannel}
+  \end{mini!}
+\end{frame}
