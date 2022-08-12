@@ -339,12 +339,18 @@
 \begin{frame}
   \begin{itemize}
     \item Our algorithm for the scheduling problem defines the following point:
-      \begin{equation}
-        \urllcLaFourCandidateCur =
+      \tiny
+      \begin{align}
+        \urllcLaFourCandidateCur &=
           \begin{cases}
             1 &\baseStation = \min_{\baseStationCandidate}{\argmax_{\baseStationCandidate}{\urllcPeakRateFourCurBaseStationCandidate}}\\
             0 &\text{otherwise}
-          \end{cases} \forall\urllcUser,
-      \end{equation}
+          \end{cases} \forall\urllcUser,\nonumber\\
+        \urllcNpRaFiveCandidateCur &=
+          \begin{cases}
+            1 &\sum_{\urllcUserCandidate = 0}^{\urllcUser - 1}{\ceil{\frac{\demandThreeUserCandidateCur}{\urllcMaxRateThreeUserCandidateCur}} \urllcLaFourCandidateUserCandidateCur} \leq \subchannel \leq \left(\sum_{\urllcUserCandidate = 0}^{\urllcUser}{\ceil{\frac{\demandThreeUserCandidateCur}{\urllcMaxRateThreeUserCandidateCur}} \urllcLaFourCandidateUserCandidateCur}\right) - 1\\
+            0 &\text{otherwise}
+          \end{cases} \forall\baseStation \forall\urllcUser.
+      \end{align}
   \end{itemize}
 \end{frame}
