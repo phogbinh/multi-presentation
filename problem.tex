@@ -335,3 +335,16 @@
     \item $\minCostOneCur \sum_{\urllcUser}{\ceil{\frac{\demandThreeCur}{\urllcMaxRateThreeCur}}}$ is the optimal value for the homogeneous problem\proofFootnote.
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item Our algorithm for the scheduling problem defines the following point:
+      \begin{equation}
+        \urllcLaFourCandidateCur =
+          \begin{cases}
+            1 &\baseStation = \min_{\baseStationCandidate}{\argmax_{\baseStationCandidate}{\urllcPeakRateFourCurBaseStationCandidate}}\\
+            0 &\text{otherwise}
+          \end{cases} \forall\urllcUser,
+      \end{equation}
+  \end{itemize}
+\end{frame}
