@@ -371,3 +371,16 @@
       \end{equation}
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \begin{itemize}
+    \item The sorted variant of our algorithm defines the following point:
+      \begin{align}
+        \urllcLaFourCandidateCur =
+          \begin{cases}
+            1 &\baseStation = \min_{\baseStationCandidate}{\argmax_{\baseStationCandidate}{\urllcPeakRateFourCurBaseStationCandidate}}\\
+            0 &\text{otherwise}
+          \end{cases} \forall\urllcUser,\nonumber\\
+      \end{align}
+  \end{itemize}
+\end{frame}
