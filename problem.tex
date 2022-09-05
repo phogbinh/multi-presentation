@@ -375,12 +375,12 @@
     \item The opportunistic nearest association algorithm defines the following point:
       \tiny
       \begin{align}
-        \urllcLaFourCandidateCur &=
+        \forall\urllcUser \colon \urllcLaFourCandidateCur &=
           \begin{cases}
             1 &\baseStation = \min_{\baseStationCandidate}{\argmax_{\baseStationCandidate}{\urllcPeakRateFourCurBaseStationCandidate}}\\
             0 &\text{otherwise}
-          \end{cases} \forall\urllcUser,\nonumber\\
-        \urllcNpRaFiveCandidateCur &=
+          \end{cases},\nonumber\\
+        \forall\baseStation \colon \forall\urllcUser \colon \urllcNpRaFiveCandidateCur &=
           \begin{cases}
             1 &
               \begin{aligned}
@@ -389,7 +389,7 @@
                 \leq &\sum_{\urllcUserCandidate = 0}^{\urllcUser}{\ceil{\frac{\demandThreeUserCandidateCur}{\urllcMaxRateThreeUserCandidateCur}} \urllcLaFourCandidateUserCandidateCur}
               \end{aligned}\\
             0 &\text{otherwise}
-          \end{cases} \forall\baseStation \forall\urllcUser.
+          \end{cases}.
       \end{align}
   \end{itemize}
 \end{frame}
