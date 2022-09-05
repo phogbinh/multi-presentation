@@ -138,11 +138,7 @@
   \begin{itemize}
     \item The initial value of which is defined by the feasible policy $\embbRaVecRelaxCandidate$ for the relaxed eMBB problem where\proofFootnote
       \begin{equation}
-        \embbRaFourRelaxCandidate =
-          \begin{cases}
-            \frac{1}{\embbUsersNum} &\timeSlot = 0\\
-            0 &\nonzeroTimeSlots
-          \end{cases} \forall\embbUser \forall\baseStation \forall\subchannel.
+        \embbMovingAverageRateInitialValuePolicy.
       \end{equation}
   \end{itemize}
 \end{frame}
