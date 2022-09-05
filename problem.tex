@@ -268,7 +268,7 @@
       {\leq 1}
       {\forall\baseStation \forall\subchannel}
     \addConstraint
-      {\urllcRateThreeCur}
+      {\sum_{\baseStation, \subchannel}{\urllcNpRaFiveCur \urllcPeakRateFourCur}}
       {\geq \demandThreeCur}
       {\forall\urllcUser}
     \addConstraint
