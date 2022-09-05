@@ -179,7 +179,7 @@
   \frametitle{URLLC Problem}
   \small
   \begin{maxi!}
-    {\urllcRaVecOneSlotCur, \urllcLaVecOneSlotCur}{\sum_{\embbUser}{\frac{1}{\embbMovingAverageRateTwoRelaxCur} \sum_{\baseStation, \subchannel}{\frac{\sum_{\timeMinislot}{\left(\embbRaFourCandidateCur - \sum_{\urllcUser}{\urllcRaSixSlotCur}\right)}}{\timeMinislotsNum} \embbPeakRateFourCur}}}
+    {\urllcRaVecOneSlotCur, \urllcLaVecOneSlotCur}{\sum_{\embbUser}{\frac{\embbRateTwoRelaxCur}{\embbMovingAverageRateTwoRelaxCur}}}
     {}{}
     \addConstraint
       {\sum_{\baseStation}{\urllcLaFourSlotCur}}
