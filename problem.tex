@@ -125,11 +125,11 @@
   \begin{itemize}
     \item The relaxed moving average rate of eMBB user is defined based on exponential moving average (EMA) as
       \begin{equation}
-        \embbMovingAverageRateTwoRelax =
+        \forall\embbUser \colon \embbMovingAverageRateTwoRelax =
           \begin{cases}
             \frac{1}{\timeSlotsNum} \sum_{\baseStation, \subchannel}{\frac{1}{\embbUsersNum} \embbPeakRateFour} &\timeSlot = 0\\
             \left(1 - \smoothingFactor\right) \embbMovingAverageRateTwoRelaxDecrement + \smoothingFactor \embbRateTwoRelaxDecrement &\nonzeroTimeSlots
-          \end{cases} \bpsl \forall\embbUser.
+          \end{cases} \bpsl.
       \end{equation}
   \end{itemize}
 \end{frame}
