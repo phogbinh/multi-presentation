@@ -1,4 +1,0 @@
-vec vector
-ra resource allocation
-la link association
-pb problem
