@@ -17,34 +17,6 @@
   \end{figure}
 \end{frame}
 
-\subsection{Multicell Co-channel Intereference}
-\begin{frame}
-  \frametitle{Multicell Co-channel Interference}
-  \begin{itemize}
-    \item Since the base stations are homogeneous i.e. use the same frequency band, there exists 3 types of interference:
-      \begin{itemize}
-        \item eMBB-eMBB inteference e.g. at subchannel $3$, signal from base station $0$ to eMBB user $0$ interferes with that from base station $1$ to eMBB user $1$.
-        \item eMBB-URLLC interference e.g. at subchannel $0$, signal from base station $0$ to eMBB user $0$ interferes with that from base station $2$ to URLLC user $1$.
-        \item URLLC-URLLC interference e.g. at subchannel $4$, signal from base station $1$ to URLLC user $0$ interferes with that from base station $2$ to URLLC user $1$.
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \begin{itemize}
-    \item A viable solution might be 5G Non-orthogonal Multiple Access (NOMA) with Successive Interference Cancellation (SIC). % TODO example
-    \item Inspired by Low Energy Adaptive Clustering Hierarchy (LEACH), a modified Code Division Multiple Access (CDMA) scheme is proposed to tackle the problem\exampleFootnote.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \begin{itemize}
-    \item Our scheme works well with the often small number of base stations.
-    \item Our scheme encompasses URLLC \highlight{multiconnectivity} via joint transmission.
-    \item This hence introduces a joint CDMA/OFDMA scheme.
-  \end{itemize}
-\end{frame}
-
 \subsection{Spectrum Inefficiency}
 \begin{frame}
   \frametitle{Spectrum Inefficiency}
