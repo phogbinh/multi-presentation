@@ -45,8 +45,8 @@
     \item The system maximizes eMBB traffic's total average rate and fairness \eqref{pb:problem0}.
     \item For each time slot, the system
       \begin{itemize}
-        \item schedules a subchannel to at most one eMBB user \eqref{pb:problem1}.
-        \item either un-schedules or schedules a subchannel to an eMBB user \eqref{pb:problem2}.
+        \item allocates a subchannel to at most one eMBB user \eqref{pb:problem1}.
+        \item either un-allocates or allocates a subchannel to an eMBB user \eqref{pb:problem2}.
       \end{itemize}
   \end{itemize}
 \end{frame}
@@ -56,9 +56,9 @@
     \item For each time minislot, the system
       \begin{itemize}
         \item associates at most one base station to a URLLC user \eqref{pb:problem3}.
-        \item schedules a subchannel to a URLLC user only if it associates the corresponding base station to the user \eqref{pb:problem4}.
+        \item allocates a subchannel to a URLLC user only if it associates the corresponding base station to the user \eqref{pb:problem4}.
         \item either un-associates or associates a base station to a URLLC user \eqref{pb:problem5}.
-        \item schedules a subchannel to at most one URLLC user, and punctures the subchannel for a URLLC user only if it schedules the subchannel to the corresponding eMBB user \eqref{pb:problem6}\proofFootnote.
+        \item allocates a subchannel to at most one URLLC user, and punctures the subchannel for a URLLC user only if it allocates the subchannel to the corresponding eMBB user \eqref{pb:problem6}\proofFootnote.
         \item serves demands of URLLC users without delays \eqref{pb:problem7}.
         \item employs URLLC puncturing scheme instead of superposition \eqref{pb:problem8}.
       \end{itemize}
@@ -68,7 +68,7 @@
 \begin{frame}
   \begin{itemize}
     \item Do note that current eMBB users' rate models for URLLC puncturing scheme in the literature are mostly non-linear \cite{BMATAMHH21}.
-    \item Whilst proposed linear models are either intractable \cite{YZR21} or inappropriate \cite{AVS20} for discrete subchannel scheduling with multiple URLLC users.
+    \item Whilst proposed linear models are either intractable \cite{YZR21} or inappropriate \cite{AVS20} for discrete subchannel allocation with multiple URLLC users.
   \end{itemize}
 \end{frame}
 
