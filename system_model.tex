@@ -79,6 +79,10 @@
       \begin{equation*}
         \forall\timeSlot \colon \forall\baseStation \colon \forall\subchannel \colon \sum_{\embbUser}{\embbRaFour} \leq 1.
       \end{equation*}
+    \item For each time slot, the system either un-allocates or allocates a subchannel to an eMBB user \eqref{pb:problem2}:
+      \begin{equation*}
+        \forall\embbUser \colon \forall\timeSlot \colon \forall\baseStation \colon \forall\subchannel \colon \embbRaFour \in \setDst{0, 1}.
+      \end{equation*}
   \end{itemize}
 \end{frame}
 
