@@ -60,7 +60,11 @@
 
 \begin{frame}
   \begin{itemize}
-    \item The system maximizes eMBB traffic's total average rate and fairness \eqref{pb:problem0}.
+    \item The system maximizes eMBB traffic's total average rate and fairness \eqref{pb:problem0}:
+      \begin{maxi*}
+        {\embbRaVec, \urllcRaVec, \urllcLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOne}}.}
+        {}{}
+      \end{maxi*}
     \item For each time slot, the system
       \begin{itemize}
         \item allocates a subchannel to at most one eMBB user \eqref{pb:problem1}.
