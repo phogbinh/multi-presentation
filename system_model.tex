@@ -75,6 +75,15 @@
 
 \begin{frame}
   \begin{itemize}
+    \item For each time slot, the system allocates a subchannel to at most one eMBB user \eqref{pb:problem1}:
+      \begin{equation*}
+        \forall\timeSlot \colon \forall\baseStation \colon \forall\subchannel \colon \sum_{\embbUser}{\embbRaFour} \leq 1.
+      \end{equation*}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
     \item For each time minislot, the system
       \begin{itemize}
         \item associates at most one base station to a URLLC user \eqref{pb:problem3}.
