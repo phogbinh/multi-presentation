@@ -21,46 +21,46 @@
   \frametitle{Stochastic Problem}
   \small
   \begin{maxi!}
-    {\embbRaVec, \urllcRaVec, \urllcLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOne}}\label{pb:problem0}}
+    {\embbRaVec, \urllcRaVec, \urllcLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOne}}\label{pb:stochastic0}}
     {}{}
     \addConstraint
       {\sum_{\embbUser}{\embbRaFour}}
-      {\leq 1\label{pb:problem1}}
+      {\leq 1\label{pb:stochastic1}}
       {\forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\embbRaFour}
-      {\in \setDst{0, 1}\label{pb:problem2}}
+      {\in \setDst{0, 1}\label{pb:stochastic2}}
       {\forall\embbUser \forall\timeSlot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\sum_{\baseStation}{\urllcLaFour}}
-      {\leq 1\label{pb:problem3}}
+      {\leq 1\label{pb:stochastic3}}
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot}
     \addConstraint
       {\urllcRaSix}
-      {\leq \urllcLaFour\label{pb:problem4}}
+      {\leq \urllcLaFour\label{pb:stochastic4}}
       {\forall\urllcUser \forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\urllcLaFour}
-      {\in \setDst{0, 1}\label{pb:problem5}}
+      {\in \setDst{0, 1}\label{pb:stochastic5}}
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot \forall\baseStation}
     \addConstraint
       {\sum_{\urllcUser}{\urllcRaSix}}
-      {\leq \embbRaFour\label{pb:problem6}}
+      {\leq \embbRaFour\label{pb:stochastic6}}
       {\forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
     \addConstraint
       {\urllcRateRandThree}
-      {\geq \demandRandThree\label{pb:problem7}}
+      {\geq \demandRandThree\label{pb:stochastic7}}
       {\forall\urllcUser \forall\timeSlot \forall\timeMinislot}
     \addConstraint
       {\urllcRaSix}
-      {\in \setDst{0, 1}\label{pb:problem8}}
+      {\in \setDst{0, 1}\label{pb:stochastic8}}
       {\forall\urllcUser \forall\embbUser \forall\timeSlot \forall\timeMinislot \forall\baseStation \forall\subchannel}
   \end{maxi!}
 \end{frame}
 
 \begin{frame}
   \begin{itemize}
-    \item The system maximizes eMBB traffic's total average rate and fairness \eqref{pb:problem0}:
+    \item The system maximizes eMBB traffic's total average rate and fairness \eqref{pb:stochastic0}:
       \begin{maxi*}
         {\embbRaVec, \urllcRaVec, \urllcLaVec}{\sum_{\embbUser}{\utilityCompositeFunction{\embbAverageRateRandOne}}.}
         {}{}
@@ -70,11 +70,11 @@
 
 \begin{frame}
   \begin{itemize}
-    \item For each time slot, the system allocates a subchannel to at most one eMBB user \eqref{pb:problem1}:
+    \item For each time slot, the system allocates a subchannel to at most one eMBB user \eqref{pb:stochastic1}:
       \begin{equation*}
         \forall\timeSlot \colon \forall\baseStation \colon \forall\subchannel \colon \sum_{\embbUser}{\embbRaFour} \leq 1.
       \end{equation*}
-    \item For each time slot, the system either un-allocates or allocates a subchannel to an eMBB user \eqref{pb:problem2}:
+    \item For each time slot, the system either un-allocates or allocates a subchannel to an eMBB user \eqref{pb:stochastic2}:
       \begin{equation*}
         \forall\embbUser \colon \forall\timeSlot \colon \forall\baseStation \colon \forall\subchannel \colon \embbRaFour \in \setDst{0, 1}.
       \end{equation*}
@@ -83,15 +83,15 @@
 
 \begin{frame}
   \begin{itemize}
-    \item For each time minislot, the system associates at most one base station to a URLLC user \eqref{pb:problem3}:
+    \item For each time minislot, the system associates at most one base station to a URLLC user \eqref{pb:stochastic3}:
       \begin{equation*}
         \forall\urllcUser \colon \forall\timeSlot \colon \forall\timeMinislot \colon \sum_{\baseStation}{\urllcLaFour} \leq 1.
       \end{equation*}
-    \item For each time minislot, the system allocates a subchannel to a URLLC user only if it associates the corresponding base station to the user \eqref{pb:problem4}:
+    \item For each time minislot, the system allocates a subchannel to a URLLC user only if it associates the corresponding base station to the user \eqref{pb:stochastic4}:
       \begin{equation*}
         \forall\urllcUser \colon \forall\embbUser \colon \forall\timeSlot \colon \forall\timeMinislot \colon \forall\baseStation \colon \forall\subchannel \colon \urllcRaSix \leq \urllcLaFour.
       \end{equation*}
-    \item For each time minislot, the system either un-associates or associates a base station to a URLLC user \eqref{pb:problem5}:
+    \item For each time minislot, the system either un-associates or associates a base station to a URLLC user \eqref{pb:stochastic5}:
       \begin{equation*}
         \forall\urllcUser \colon \forall\timeSlot \colon \forall\timeMinislot \colon \forall\baseStation \colon \urllcLaFour \in \setDst{0, 1}.
       \end{equation*}
@@ -100,15 +100,15 @@
 
 \begin{frame}
   \begin{itemize}
-    \item For each time minislot, the system allocates a subchannel to at most one URLLC user, and punctures the subchannel for a URLLC user only if it allocates the subchannel to the corresponding eMBB user \eqref{pb:problem6}\proofFootnote:
+    \item For each time minislot, the system allocates a subchannel to at most one URLLC user, and punctures the subchannel for a URLLC user only if it allocates the subchannel to the corresponding eMBB user \eqref{pb:stochastic6}\proofFootnote:
       \begin{equation*}
         \forall\embbUser \colon \forall\timeSlot \colon \forall\timeMinislot \colon \forall\baseStation \colon \forall\subchannel \colon \sum_{\urllcUser}{\urllcRaSix} \leq \embbRaFour.
       \end{equation*}
-    \item For each time minislot, the system serves demands of URLLC users without delay \eqref{pb:problem7}:
+    \item For each time minislot, the system serves demands of URLLC users without delay \eqref{pb:stochastic7}:
       \begin{equation*}
         \forall\urllcUser \colon \forall\timeSlot \colon \forall\timeMinislot \colon \urllcRateRandThree \geq \demandRandThree.
       \end{equation*}
-    \item For each time minislot, the system employs URLLC puncturing scheme \eqref{pb:problem8}:
+    \item For each time minislot, the system employs URLLC puncturing scheme \eqref{pb:stochastic8}:
       \begin{equation*}
         \forall\urllcUser \colon \forall\embbUser \colon \forall\timeSlot \colon \forall\timeMinislot \colon \forall\baseStation \colon \forall\subchannel \colon \urllcRaSix \in \setDst{0, 1}.
       \end{equation*}
