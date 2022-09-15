@@ -83,20 +83,6 @@
 
 \begin{frame}
   \begin{itemize}
-    \item For each time minislot, the system
-      \begin{itemize}
-        \item associates at most one base station to a URLLC user \eqref{pb:problem3}.
-        \item allocates a subchannel to a URLLC user only if it associates the corresponding base station to the user \eqref{pb:problem4}.
-        \item either un-associates or associates a base station to a URLLC user \eqref{pb:problem5}.
-        \item allocates a subchannel to at most one URLLC user, and punctures the subchannel for a URLLC user only if it allocates the subchannel to the corresponding eMBB user \eqref{pb:problem6}\proofFootnote.
-        \item serves demands of URLLC users without delays \eqref{pb:problem7}.
-        \item employs URLLC puncturing scheme instead of superposition \eqref{pb:problem8}.
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \begin{itemize}
     \item For each time minislot, the system associates at most one base station to a URLLC user \eqref{pb:problem3}:
       \begin{equation*}
         \forall\urllcUser \colon \forall\timeSlot \colon \forall\timeMinislot \colon \sum_{\baseStation}{\urllcLaFour} \leq 1.
