@@ -195,6 +195,14 @@
 
 \begin{frame}
   \begin{itemize}
+    \item To solve the gradient problem, linear programming techniques might be considered.
+    \item Although ellipsoid methods solve by polynomial time in theory, and interior-point methods converge remarkably fast in practice, such solvers do not guarantee a binary solution.
+    \item Fortunately, the gradient problem's totally unimodular property makes simplex methods viable.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{itemize}
     \item Given a policy $\embbRaVecCandidate$ where for $\timeSlot = 0, \dots, \timeSlotsNum - 1$, $\embbRaVecOneCandidate$ is a basic optimal point for the $\timeSlot^{th}$ gradient problem, then $\embbRaVecCandidate$ is an asymptotically optimal policy for the eMBB problem\proofFootnote.
   \end{itemize}
 \end{frame}
