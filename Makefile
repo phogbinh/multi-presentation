@@ -16,6 +16,7 @@ all: *.eps $(REFERENCE)
 
 *.eps:
 	for %%f in ($(MULTI_FIGURE_DIR)\*.svg) do $(INKSCAPE) %%f -o .\%%~nf.eps
+	$(COPY) $(MULTI_FIGURE_DIR)\*.eps .
 
 $(REFERENCE):
 	$(COPY) $(MULTI_REFERENCE_DIR)\$(REFERENCE)
